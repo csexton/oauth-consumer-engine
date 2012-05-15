@@ -1,6 +1,6 @@
 module OauthConsumerEngine
   class Config
-    attr_accessor :args, :custom_provider_url, :app_id, :app_secret
+    attr_accessor :args, :client_options, :app_id, :app_secret
 
     def new(args)
       @provider = :engine_id
