@@ -10,7 +10,7 @@ module OauthConsumerEngine
 
       # Since this is a registered application, add the app id and secret here
       ENV['CUSTOM_PROVIDER_URL'] = OauthConsumerEngine.config.client_options[:site]
-      require 'engine_id'
+      require 'oauth_consumer_engine/engine_id'
 
       Rails.application.config.middleware.use OmniAuth::Builder do
         provider :engine_id, OauthConsumerEngine.config.app_id, OauthConsumerEngine.config.app_secret
